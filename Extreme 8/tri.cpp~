@@ -1,0 +1,84 @@
+int main(){
+
+
+	for(int ii=0;ii<122;ii++){
+		for(int jj=1;l[ii][0]*jj<1010;jj++){
+			sieve[ii][l[ii][0]*jj]=true;
+			}
+		}
+		int n,t1,t2;
+		cin>>n;
+		for(int ii=0;ii<n;ii++){
+			cin>>t1>>t2;
+			bool f=false;
+			for(int jj=0;jj<122;jj++){
+			if(sieve[jj][t1] && sieve[jj][t2]){ 
+				cout<<"TRUE"<<endl; f=true; break; 
+			}
+		}
+		if(!f) cout<<"FALSE"<<endl;
+	}
+	return 0;
+}
+
+
+/*#include<iostream>
+#include<vector>
+#include<set>
+#include<math.h>
+using namespace std;
+
+bool abs( double x )
+{
+	if( x < 0 )
+		return -x;
+	return x;
+}
+
+int main()
+{
+	int n;
+	cin>>n;
+	for( int i=0; i<n; i++ )
+	{
+		double a,b;
+		cin>>a>>b;
+		
+		bool flag1 = false;
+		bool flag2 = false;
+		set<double> rs;
+		
+		int x1,x2,y1,y2;
+		for( int j=1; j<a; j++ )
+			if( (a*a)-(j*j) == ((int)sqrt( (a*a)-(j*j) ))*((int)sqrt( (a*a)-(j*j) )) )
+			{
+				double k = (sqrt( (a*a)-(j*j) ));
+				rs.insert( k/j );
+				rs.insert( j/k );
+				flag1 = true;
+			}
+		//cout<<endl;
+		for( int j=b-1; j>0; j-- )
+			if( (b*b)-(j*j) == ((int)sqrt( (b*b)-(j*j) ))*((int)sqrt( (b*b)-(j*j) )) )
+			{
+				double k = (sqrt( (b*b)-(j*j) ));
+				if( rs.count(k/j) != 0 )
+					cout<<"TRUE"<<endl;
+						goto asdf;
+				flag2 = true;
+			}
+		if( flag1 == true && flag2 == true )
+		{
+			if( ((y1-y2)*(y1-y2))+((x1+x2)*(x1+x2)) == a*a + b*b )
+					{
+						cout<<"TRUE"<<endl;
+						goto asdf;
+					}
+		}
+		else
+			cout<<"FALSE"<<endl;
+		asdf:
+		continue;
+	}
+	return 0;
+}*/
